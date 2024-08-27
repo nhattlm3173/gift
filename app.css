@@ -15,7 +15,8 @@ body {
     animation: popupEffect 0.5s ease-in-out;
 }
 
-.closeButton {
+.closeGreetButton,
+.closeTksButton {
     width: 10rem;
     height: 5rem;
     background-color: bisque;
@@ -28,6 +29,7 @@ body {
     color: coral;
     cursor: pointer;
     margin: 0 10rem;
+    border-radius: 10px;
 }
 
 #dogDau {
@@ -110,4 +112,61 @@ body {
     font-size: 80px;
     font-weight: 600;
     text-align: center;
+}
+
+.TksShow {
+    background-color: aqua;
+    width: 50rem;
+    height: 40rem;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: popupEffect 0.5s ease-in-out;
+    display: none;
+}
+
+.container.hide .TksShow {
+    animation: popupHideEffect 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .firstShow {
+        width: 26rem;
+        height: 30rem;
+        left: 0;
+        top: 20%;
+    }
+
+    .TksShow {
+        width: 26rem;
+        height: 30rem;
+        left: 0;
+        top: 20%;
+    }
+
+    #dogDau {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .ask {
+        width: 100%;
+        font-size: 70px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .tks {
+        width: 100%;
+        font-size: 50px;
+        font-weight: 600;
+        text-align: center;
+    }
 }
