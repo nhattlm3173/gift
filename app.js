@@ -24,11 +24,77 @@ closeGreetButton.addEventListener("click", () => {
     }, 500);
 })
 NoBtn.addEventListener("click", () => {
-    const randomNumberX = Math.floor(Math.random() * 11);
-    const randomNumberY = Math.floor(Math.random() * 11);
+    const randomNumberX = Math.floor(Math.random() * 15) - 10;
+    const randomNumberY = Math.floor(Math.random() * 15) - 10;
     NoBtn.style.transform = `translate(${randomNumberX}rem, ${randomNumberY}rem)`
 })
 YesBtn.addEventListener("click", () => {
     container.classList.remove('hide');
     TksShow.style.display = 'flex';
 })
+// document.getElementById('fireworksButton').addEventListener('click', () => {
+//     createFireworks();
+// });
+
+// const canvas = document.getElementById('fireworksCanvas');
+// const ctx = canvas.getContext('2d');
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+
+// function createFireworks() {
+//     const particles = [];
+//     const numberOfParticles = 100;
+//     const explosionCenter = {
+//         x: canvas.width / 2,
+//         y: canvas.height / 2
+//     };
+
+//     for (let i = 0; i < numberOfParticles; i++) {
+//         particles.push(new Particle(explosionCenter.x, explosionCenter.y));
+//     }
+
+//     function animate() {
+//         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//         particles.forEach((particle, index) => {
+//             if (particle.alpha > 0) {
+//                 particle.update();
+//                 particle.draw();
+//             } else {
+//                 particles.splice(index, 1);
+//             }
+//         });
+
+//         if (particles.length > 0) {
+//             requestAnimationFrame(animate);
+//         }
+//     }
+
+//     animate();
+// }
+
+// function Particle(x, y) {
+//     this.x = x;
+//     this.y = y;
+//     this.speed = Math.random() * 5 + 2;
+//     this.angle = Math.random() * 2 * Math.PI;
+//     this.size = Math.random() * 3 + 1;
+//     this.alpha = 1;
+
+//     this.update = function () {
+//         this.x += Math.cos(this.angle) * this.speed;
+//         this.y += Math.sin(this.angle) * this.speed;
+//         this.alpha -= 0.01;
+//     };
+
+//     this.draw = function () {
+//         ctx.save();
+//         ctx.globalAlpha = this.alpha;
+//         ctx.fillStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+//         ctx.closePath();
+//         ctx.fill();
+//         ctx.restore();
+//     };
+// }

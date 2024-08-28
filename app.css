@@ -1,9 +1,12 @@
 body {
-    background-color: blueviolet;
+    background-image: url(images/tenor.gif);
+    background-repeat: repeat;
+    /* background-size: cover; */
 }
 
 .firstShow {
-    background-color: aqua;
+    background-image: url(images/hello.gif);
+    background-size: cover;
     width: 50rem;
     height: 40rem;
     position: absolute;
@@ -13,9 +16,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     animation: popupEffect 0.5s ease-in-out;
+    z-index: 10000;
 }
 
-.closeGreetButton,
+/* .closeGreetButton,
 .closeTksButton {
     width: 10rem;
     height: 5rem;
@@ -30,14 +34,14 @@ body {
     cursor: pointer;
     margin: 0 10rem;
     border-radius: 10px;
-}
+} */
 
 #dogDau {
     width: 30rem;
     height: 30rem;
 }
 
-#BtnYES {
+/* #BtnYES {
     width: 15rem;
     height: 5rem;
     display: flex;
@@ -48,9 +52,9 @@ body {
     cursor: pointer;
     font-weight: 600;
     border-radius: 10px;
-}
+} */
 
-#BtnNO {
+/* #BtnNO {
     width: 10rem;
     height: 4rem;
     display: flex;
@@ -61,7 +65,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     border-radius: 10px;
-}
+} */
 
 .container {
     width: 100%;
@@ -105,6 +109,11 @@ body {
     font-size: 100px;
     font-weight: 600;
     text-align: center;
+    /* color: rgb(30, 120, 210); */
+    background: url('images/thoimien.gif') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .tks {
@@ -115,7 +124,8 @@ body {
 }
 
 .TksShow {
-    background-color: aqua;
+    background-image: url(images/cat-kissing.gif);
+    background-size: cover;
     width: 50rem;
     height: 40rem;
     position: absolute;
@@ -126,6 +136,7 @@ body {
     flex-wrap: wrap;
     animation: popupEffect 0.5s ease-in-out;
     display: none;
+    z-index: 10;
 }
 
 .container.hide .TksShow {
@@ -134,7 +145,8 @@ body {
 
 @media (max-width: 600px) {
     body {
-        background-color: lightblue;
+        /* background-color: lightblue; */
+        background-size: contain;
     }
 
     .firstShow {
@@ -168,5 +180,294 @@ body {
         font-size: 50px;
         font-weight: 600;
         text-align: center;
+    }
+}
+
+/* #fireworksButton {
+    position: absolute;
+    z-index: 2;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff4500;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#fireworksCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* CSS */
+.button-49,
+.button-49:after {
+    width: 100px;
+    height: 56px;
+    line-height: 60px;
+    margin: 10px;
+    text-align: center;
+    /* line-height: 78px; */
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-49:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .button-49,
+    .button-49:after {
+        width: 100px;
+        height: 56px;
+        line-height: 60px;
+    }
+}
+
+
+/* CSS */
+.button-82-pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-82-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%);
+}
+
+.button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+    .button-82-front {
+        font-size: 1.25rem;
+        padding: 12px 42px;
+    }
+}
+
+.button-82-pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+
+/* CSS */
+.button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    .button-56 {
+        padding: 0 40px;
     }
 }
