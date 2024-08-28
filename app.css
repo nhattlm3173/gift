@@ -168,7 +168,8 @@ body {
         background-size: contain;
     }
 
-    .firstShow {
+    .firstShow,
+    .HUHShow {
         width: 26rem;
         height: 30rem;
         left: 0;
