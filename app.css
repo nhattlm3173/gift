@@ -19,6 +19,21 @@ body {
     z-index: 10000;
 }
 
+.HUHShow {
+    background-image: url(images/therock.gif);
+    background-size: cover;
+    width: 50rem;
+    height: 40rem;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: popupEffect 0.5s ease-in-out;
+    z-index: 1000;
+}
+
 /* .closeGreetButton,
 .closeTksButton {
     width: 10rem;
@@ -101,6 +116,10 @@ body {
 }
 
 .container.hide .firstShow {
+    animation: popupHideEffect 0.5s ease-in-out;
+}
+
+.container.hide .HUHShow {
     animation: popupHideEffect 0.5s ease-in-out;
 }
 

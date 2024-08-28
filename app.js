@@ -1,10 +1,13 @@
 const firstShow = document.querySelector(".firstShow");
 const closeGreetButton = document.querySelector(".closeGreetButton");
 const closeTksButton = document.querySelector(".closeTksButton");
+const closeHUHButton = document.querySelector(".closeHUHButton");
 const container = document.querySelector(".container");
 const YesBtn = document.querySelector("#BtnYES");
 const NoBtn = document.querySelector("#BtnNO");
 const TksShow = document.querySelector(".TksShow");
+const HUHShow = document.querySelector(".HUHShow");
+let count = 0;
 closeGreetButton.addEventListener("click", () => {
     container.classList.add('hide');
     setTimeout(function () {
@@ -23,10 +26,22 @@ closeGreetButton.addEventListener("click", () => {
         firstShow.style.display = 'none';
     }, 500);
 })
+closeHUHButton.addEventListener("click", () => {
+    container.classList.add('hide');
+    setTimeout(function () {
+        HUHShow.style.display = 'none';
+    }, 500);
+})
 NoBtn.addEventListener("click", () => {
     const randomNumberX = Math.floor(Math.random() * 15) - 10;
     const randomNumberY = Math.floor(Math.random() * 15) - 10;
     NoBtn.style.transform = `translate(${randomNumberX}rem, ${randomNumberY}rem)`
+    count++;
+    if (count >= 5) {
+        container.classList.remove('hide');
+        HUHShow.style.display = 'flex';
+        count = 0;
+    }
 })
 YesBtn.addEventListener("click", () => {
     container.classList.remove('hide');
