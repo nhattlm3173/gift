@@ -2,11 +2,13 @@ const firstShow = document.querySelector(".firstShow");
 const closeGreetButton = document.querySelector(".closeGreetButton");
 const closeTksButton = document.querySelector(".closeTksButton");
 const closeHUHButton = document.querySelector(".closeHUHButton");
+const closeByeButton = document.querySelector(".closeByeButton");
 const container = document.querySelector(".container");
 const YesBtn = document.querySelector("#BtnYES");
 const NoBtn = document.querySelector("#BtnNO");
 const TksShow = document.querySelector(".TksShow");
 const HUHShow = document.querySelector(".HUHShow");
+const ReasonShow = document.querySelector(".ReasonShow");
 let count = 0;
 closeGreetButton.addEventListener("click", () => {
     container.classList.add('hide');
@@ -19,6 +21,16 @@ closeTksButton.addEventListener("click", () => {
     setTimeout(function () {
         TksShow.style.display = 'none';
     }, 500);
+    container.classList.remove('hide');
+    ReasonShow.style.display = 'flex'
+
+})
+closeByeButton.addEventListener("click", () => {
+    container.classList.add('hide');
+    setTimeout(function () {
+        ReasonShow.style.display = 'none';
+    }, 500);
+
 })
 closeGreetButton.addEventListener("click", () => {
     container.classList.add('hide');

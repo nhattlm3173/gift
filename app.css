@@ -34,6 +34,43 @@ body {
     z-index: 1000;
 }
 
+.ReasonShow {
+    background-color: #ffe5ec;
+    background-size: cover;
+    width: 50rem;
+    height: 40rem;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: popupEffect 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.txt {
+    color: #fb6f92;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 20px;
+
+}
+
+.bye {
+    color: #fb6f92;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
 /* .closeGreetButton,
 .closeTksButton {
     width: 10rem;
@@ -120,6 +157,10 @@ body {
 }
 
 .container.hide .HUHShow {
+    animation: popupHideEffect 0.5s ease-in-out;
+}
+
+.container.hide .ReasonShow {
     animation: popupHideEffect 0.5s ease-in-out;
 }
 
