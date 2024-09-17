@@ -30,6 +30,7 @@ closeByeButton.addEventListener("click", () => {
     setTimeout(function () {
         ReasonShow.style.display = 'none';
     }, 500);
+    window.close()
 
 })
 closeGreetButton.addEventListener("click", () => {
